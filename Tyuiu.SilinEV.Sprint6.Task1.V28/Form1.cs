@@ -34,9 +34,8 @@ namespace Tyuiu.SilinEV.Sprint6.Task1.V28
                 double[] d = ds.GetMassFunction(a, s);
                 for (int i = 0; i < d.Length; i++)
                 {
-                    textBox3.Text += $"{a} | {d[i]}";
+                    textBox3.Text += $"{a} | {d[i]}" + Environment.NewLine;
                     a++;
-                    if (i != s) textBox3.Text += Environment.NewLine;
                 }
             }
             catch 
