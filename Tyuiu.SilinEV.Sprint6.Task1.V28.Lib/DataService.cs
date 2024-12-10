@@ -15,7 +15,6 @@ namespace Tyuiu.SilinEV.Sprint6.Task1.V28.Lib
                 a[s] = Math.Round(Math.Cos(i) + 2 * i - Math.Sin(i) * 3 * i, 2);
                 s++;
             }
-
             return a;
         }
     }
