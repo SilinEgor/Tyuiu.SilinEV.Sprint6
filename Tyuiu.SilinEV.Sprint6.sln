@@ -18,6 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task3", "Task3", "{7F4EEBE1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task4", "Task4", "{DED52D19-8EBD-4F70-A5EA-B990E9550232}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\формула4.png = ..\..\..\Downloads\формула4.png
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task5", "Task5", "{D33B9518-01BF-4E4C-AB89-D5771E9282D0}"
 EndProject
