@@ -4,26 +4,31 @@ namespace Tyuiu.SilinEV.Sprint6.Task5.V13.Lib
 {
     public class DataService : ISprint6Task5V13
     {
+        public int len = 0;
         public double[] LoadFromDataFile(string path)
         {
-            string[] a = File.ReadAllText(path).Replace(".", ",").Split(" " + Environment.NewLine);
-
-            double[] s = new double[1];
-            int d = 0;
-
-            for (int i = 0; i < a.Length; i++)
+            using (StreamReader reader = new StreamReader(path))
             {
-                if (Convert.ToDouble(a[i]) < 10)
+                string line;
+                while ((line = reader.ReadLine()) != null) len++;
+            }
+
+            double[] numsArray = new double[len];
+
+            int index = 0;
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    s[d] = Convert.ToDouble(a[i]);
-                    d++;
-                    Array.Resize(ref s, d + 1);
+                    numsArray[index] = Convert.ToDouble(line);
+                    index++;
                 }
             }
 
-            Array.Resize(ref s, d);
+            numsArray = numsArray.Where(val => val < 10).ToArray();
 
-            return s;
+            return numsArray;
         }
     }
 }
