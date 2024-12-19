@@ -6,7 +6,7 @@ namespace Tyuiu.SilinEV.Sprint6.Task5.V13.Lib
     {
         public double[] LoadFromDataFile(string path)
         {
-            string[] a = File.ReadAllText(path).Replace(".", ",").Split(Environment.NewLine);
+            string[] a = File.ReadAllText(path).Replace(".", ",").Split(" " + Environment.NewLine);
 
             double[] s = new double[1];
             int d = 0;
